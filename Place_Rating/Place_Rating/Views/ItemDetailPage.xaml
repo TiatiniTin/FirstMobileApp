@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Place_Rating.Views.ItemDetailPage"
+             Title="{Binding Title}"
+             >
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="{Binding Name}" FontSize="Medium"/>
+            <Label Text="{Binding Time_created}" FontSize="Medium"/>
+            <Image Source="{Binding Place_image_path}" />
+            <Label Text="{Binding Place_name}" FontSize="Large"/>
+            <!--<Label Text="{Binding Place_location}" FontSize="Medium"/>-->
+            <Label Text="{Binding Place_location.Latitude}" FontSize="Medium"/>
+            <Label Text="{Binding Place_location.Longitude}" FontSize="Medium"/>
+            <Label Text="{Binding Place_rating}" FontSize="Large"/>
+            <Label Text="{Binding Place_description}" FontSize="Medium"/>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

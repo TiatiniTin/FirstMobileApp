@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "1BR9Xykj9lW0v6HuQ/N+v1/kv+8XlAZvf53ZyaTV+ztjXm0jgcPp3v4muEMOelLQ8688deLtrfkjinUxj71oGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\Place_Rating\\Place_Rating.iOS\\Place_Rating.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vitya\\.nuget\\packages\\elasticsearch.net\\7.9.0\\elasticsearch.net.7.9.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\grpc\\2.23.0\\grpc.2.23.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\grpc.core\\2.23.0\\grpc.core.2.23.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\grpc.core.api\\2.25.0\\grpc.core.api.2.25.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\magiconion\\3.0.13\\magiconion.3.0.13.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\magiconion.abstractions\\3.0.13\\magiconion.abstractions.3.0.13.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\messagepack\\2.1.90\\messagepack.2.1.90.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\messagepack.annotations\\2.1.90\\messagepack.annotations.2.1.90.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\nest\\7.9.0\\nest.7.9.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.reflection.emit\\4.6.0\\system.reflection.emit.4.6.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.reflection.emit.lightweight\\4.6.0\\system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\system.threading.tasks.parallel\\4.3.0\\system.threading.tasks.parallel.4.3.0.nupkg.sha512",
+    "C:\\Users\\Vitya\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}

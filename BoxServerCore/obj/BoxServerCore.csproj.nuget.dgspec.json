@@ -1,0 +1,174 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxServerCore\\BoxServerCore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\BoxProtocol.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\BoxProtocol.csproj",
+        "projectName": "BoxProtocol",
+        "projectPath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\BoxProtocol.csproj",
+        "packagesPath": "C:\\Users\\Vitya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[3.0.13, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.9.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxServerCore\\BoxServerCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxServerCore\\BoxServerCore.csproj",
+        "projectName": "BoxServerCore",
+        "projectPath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxServerCore\\BoxServerCore.csproj",
+        "packagesPath": "C:\\Users\\Vitya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxServerCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\BoxProtocol.csproj": {
+                "projectPath": "C:\\Users\\Vitya\\Desktop\\Place_Rating 2.0\\BoxProtocol\\BoxProtocol.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Elasticsearch.Net": {
+              "target": "Package",
+              "version": "[7.9.0, )"
+            },
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[3.0.13, )"
+            },
+            "MagicOnion.Hosting": {
+              "target": "Package",
+              "version": "[3.0.13, )"
+            },
+            "MagicOnion.HttpGateway": {
+              "target": "Package",
+              "version": "[3.0.13, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.9.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
