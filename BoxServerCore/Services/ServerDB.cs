@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BoxProtocol.Models;
@@ -7,6 +6,8 @@ using BoxProtocol.Interfaces;
 using Xamarin.Essentials;
 using Nest;
 using MagicOnion.Server;
+using MagicOnion;
+using System.Collections.Generic;
 
 
 namespace BoxServerCore
@@ -33,7 +34,8 @@ namespace BoxServerCore
         {
             //var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
             //Location location = Geolocation.GetLocationAsync(request).Result;
-            var location = Geolocation.GetLastKnownLocationAsync().Result;
+
+
 
             /*items = new List<Item>()
             {
@@ -58,6 +60,8 @@ namespace BoxServerCore
                     Time_created = DateTime.Now
                 }
             };*/
+            /*
+            //var location = Geolocation.GetLastKnownLocationAsync().Result;
             Item item_1 = new Item
             {
                 Id = Guid.NewGuid().ToString(),
@@ -82,10 +86,10 @@ namespace BoxServerCore
             };
 
             Add(item_1);
-            Add(item_2);
+            Add(item_2);*/
         }
 
-        public void Add<Item>(Item item) where Item : class, IHaveID
+        public UnaryResult<bool> Add(Item item)
         {
             var client = Client();
             client.Index<Item>(item, idx =>
@@ -94,30 +98,34 @@ namespace BoxServerCore
                 idx.Id(item.Id);
                 return idx;
             });
+            return new UnaryResult<bool>(true);
         }
 
-        public void Update<Item>(Item updated) where Item : class, IHaveID
+        public UnaryResult<bool> Update(Item updated)
         {
             Client().Update<Item>(updated.Id, descriptor => descriptor.Doc(updated).Index(typeof(Item).Name));
+            return new UnaryResult<bool>(true);
         }
 
-        public void Delete<Item>(string id) where Item : class, IHaveID
+        public UnaryResult<bool> Delete(string id) 
         {
             Client().Delete<Item>(id, descriptor => descriptor.Index(typeof(Item).Name));
+            return new UnaryResult<bool>(true);
         }
 
-        public Item Get<Item>(string id) where Item : class, IHaveID
+        public async UnaryResult<Item> Get(string id) 
         {
             var doc = Client().Get<Item>(id, idx => idx.Index(typeof(Item).Name));
+            await Task.Yield();
             return doc.Source;
         }
-        public List<Item> GetAll<Item>() where Item : class, IHaveID
+        public UnaryResult<List<Item>> GetAll() 
         {
             var docs = Client().Search<Item>();
-            return docs.Documents.ToList();
+            return new UnaryResult<List<Item>>(docs.Documents.ToList());
         }      
 
-        public List<Item> GetOnLocation<Item>(GeoLocation point) where Item : class, IHaveCoordinates
+        public UnaryResult<List<Item>> GetOnLocation(GeoLocation point) 
         {
             var docs = Client().Search<Item>(s => s
                 .Query(query => query.GeoDistance(
@@ -125,7 +133,7 @@ namespace BoxServerCore
                     )
                 )
             );
-            return docs.Documents.ToList();
+            return new UnaryResult<List<Item>>(docs.Documents.ToList());
         }
         
     }

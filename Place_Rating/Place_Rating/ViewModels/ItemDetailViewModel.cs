@@ -15,7 +15,6 @@ namespace Place_Rating.ViewModels
         private string place_description;
         private string place_rating;
         private Location place_location;
-        //private string place_location;
         private string place_image_path;
         private DateTime time_created;
         private string name;
@@ -107,15 +106,15 @@ namespace Place_Rating.ViewModels
             set
             {
                 itemId = value;
-                LoadItemId(value);
+                new Command(async () => await LoadItemId(value));
             }
         }
 
-        public void LoadItemId(string itemId)
+        public async Task LoadItemId(string itemId)
         {
             try
             {
-                var item =  DataStore.Get<Item>(itemId);
+                Item item = await DataStore.Get(itemId);
                 Id = item.Id;
                 Name = item.Name;
                 Place_name = item.Place_name;

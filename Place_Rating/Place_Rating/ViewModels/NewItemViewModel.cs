@@ -20,7 +20,6 @@ namespace Place_Rating.ViewModels
         private string place_description;
         private string place_rating;
         private Location place_location;
-        //private string place_location;
         private string place_image_path;
         private DateTime time_created;
         private string name;
@@ -106,37 +105,6 @@ namespace Place_Rating.ViewModels
             }
             return null;
         }
-        /*public Location Place_location
-        {
-            get => place_location;
-            set => SetProperty(ref place_location, GetCurrentLocation());
-        }
-        public Location GetCurrentLocation()
-        {
-            try
-            {
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
-                Location location =  Geolocation.GetLocationAsync(request).Result;
-
-                if (location != null)
-                {
-                    return location;
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception               
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception                
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location              
-            }
-            return null;
-        }*/
 
         public string Name
         {
@@ -176,7 +144,7 @@ namespace Place_Rating.ViewModels
 
             var channel = new Channel("localhost", 12345, ChannelCredentials.Insecure);
             var client = MagicOnionClient.Create<IServerDB>(channel);
-            client.Add(newItem);
+            await client.Add(newItem);
    
 
             // This will pop the current page off the navigation stack

@@ -13,7 +13,7 @@ namespace Place_Rating
         {
             InitializeComponent();
 
-            DependencyService.Register<IDataStore>();
+            DependencyService.Register<IServerDB>();
             MainPage = new AppShell();
         }
 

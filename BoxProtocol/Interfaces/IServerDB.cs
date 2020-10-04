@@ -10,12 +10,12 @@ namespace BoxProtocol.Interfaces
 {
     public interface IServerDB : IService<IServerDB>
     {
-        void Add<T>(T item) where T : class, IHaveID;
-        void Update<T>(T updated) where T : class, IHaveID;
-        void Delete<T>(string id) where T : class, IHaveID;
-        T Get<T>(string id) where T : class, IHaveID;
-        List<T> GetAll<T>() where T : class, IHaveID;
-        List<T> GetOnLocation<T>(GeoLocation point) where T : class, IHaveCoordinates;
+        UnaryResult<bool> Add(Item item);
+        UnaryResult<bool> Update(Item updated);
+        UnaryResult<bool> Delete(string id);
+        UnaryResult<Item>  Get(string id);
+        UnaryResult<List<Item>>  GetAll() ;
+        UnaryResult<List<Item>> GetOnLocation(GeoLocation point);
         //Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
 }

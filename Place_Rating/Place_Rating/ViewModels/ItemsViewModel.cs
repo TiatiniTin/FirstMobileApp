@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using BoxProtocol.Models;
 using Place_Rating.Views;
+using Xamarin.Essentials;
 
 namespace Place_Rating.ViewModels
 {
@@ -22,19 +23,44 @@ namespace Place_Rating.ViewModels
         {
             Title = "Places";
             Items = new ObservableCollection<Item>();
-            LoadItemsCommand = new Command(ExecuteLoadItemsCommand);
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
             ItemTapped = new Command<Item>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
         }
 
-        void ExecuteLoadItemsCommand()
+        async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
+            var location = Geolocation.GetLastKnownLocationAsync().Result;
+            Item item_1 = new Item
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = "First person",
+                Place_image_path = "isaak.jpg",
+                Place_name = "Исаакиевский собор",
+                Place_rating = "10/10",
+                Place_location = location,
+                Place_description = "This is an item description.",
+                Time_created = DateTime.Now
+            };
+            Item item_2 = new Item
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = "Second person",
+                Place_image_path = "Hermitage.jpg",
+                Place_name = "Эрмитаж",
+                Place_rating = "10/10",
+                Place_location = location,
+                Place_description = "This is an item description.",
+                Time_created = DateTime.Now
+            };
+            await DataStore.Add(item_1);
+            await DataStore.Add(item_2);
 
             try
             {
                 Items.Clear();
-                var items = DataStore.GetAll<Item>();
+                var items = await DataStore.GetAll();
                 foreach (var item in items)
                 {
                     Items.Add(item);

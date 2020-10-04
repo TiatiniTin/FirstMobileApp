@@ -55,7 +55,7 @@
     "Server + App": {
       "Projects": {
         "BoxServerCore": {},
-        "Place_Rating": {}
+        "Place_Rating.Android": {}
       }
     }
   }
