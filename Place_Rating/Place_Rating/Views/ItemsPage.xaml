@@ -4,7 +4,7 @@
              x:Class="Place_Rating.Views.ItemsPage"
              Title="{Binding Title}"
              xmlns:local="clr-namespace:Place_Rating.ViewModels"  
-             xmlns:model="clr-namespace:Place_Rating.Models"  
+             xmlns:model="clr-namespace:BoxProtocol.Models;assembly=BoxProtocol"  
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>

@@ -5,9 +5,17 @@ public class MonoPackageManager_Resources {
 		"Place_Rating.Android.dll",
 		"Elasticsearch.Net.dll",
 		"FormsViewGroup.dll",
+		"Grpc.Core.Api.dll",
+		"Grpc.Core.dll",
+		"MagicOnion.Abstractions.dll",
+		"MagicOnion.dll",
+		"MessagePack.Annotations.dll",
+		"MessagePack.dll",
+		"Microsoft.Bcl.AsyncInterfaces.dll",
 		"Nest.dll",
 		"Place_Rating.dll",
 		"Plugin.Media.dll",
+		"System.Collections.Immutable.dll",
 		"System.Diagnostics.DiagnosticSource.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
@@ -51,6 +59,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
+		"BoxProtocol.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

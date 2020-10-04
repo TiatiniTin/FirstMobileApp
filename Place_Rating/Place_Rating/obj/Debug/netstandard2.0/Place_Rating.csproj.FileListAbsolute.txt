@@ -27,3 +27,25 @@ C:\Users\Vitya\Desktop\Place_Rating\Place_Rating\Place_Rating\bin\Debug\netstand
 C:\Users\Vitya\Desktop\Place_Rating\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\Place_Rating.dll
 C:\Users\Vitya\Desktop\Place_Rating\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\ref\Place_Rating.dll
 C:\Users\Vitya\Desktop\Place_Rating\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\Place_Rating.pdb
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.csprojAssemblyReference.cache
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.AssemblyInfoInputs.cache
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.AssemblyInfo.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.csproj.CoreCompileInputs.cache
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\ref\Place_Rating.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.pdb
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\Place_Rating.deps.json
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\Place_Rating.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\ref\Place_Rating.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\Place_Rating.pdb
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\BoxProtocol.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\bin\Debug\netstandard2.0\BoxProtocol.pdb
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Vitya\Desktop\Place_Rating 2.0\Place_Rating\Place_Rating\obj\Debug\netstandard2.0\Place_Rating.csproj.CopyComplete

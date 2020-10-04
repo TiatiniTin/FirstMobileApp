@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Place_Rating.Services;
+using BoxProtocol.Interfaces;
 using Place_Rating.Views;
 
 namespace Place_Rating
@@ -13,7 +13,7 @@ namespace Place_Rating
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<IDataStore>();
             MainPage = new AppShell();
         }
 

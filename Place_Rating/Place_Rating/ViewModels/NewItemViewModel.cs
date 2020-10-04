@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using Place_Rating.Models;
+using BoxProtocol.Models;
+using BoxProtocol.Interfaces;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -83,22 +84,22 @@ namespace Place_Rating.ViewModels
                     return location;
                 }
             }
-            catch (FeatureNotSupportedException fnsEx)
+            catch (FeatureNotSupportedException )
             {
                 // Handle not supported on device exception
   
             }
-            catch (FeatureNotEnabledException fneEx)
+            catch (FeatureNotEnabledException )
             {
                 // Handle not enabled on device exception
                
             }
-            catch (PermissionException pEx)
+            catch (PermissionException )
             {
                 // Handle permission exception
                
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 // Unable to get location
                 
@@ -174,8 +175,8 @@ namespace Place_Rating.ViewModels
             //await DataStore.AddItemAsync(newItem);
 
             var channel = new Channel("localhost", 12345, ChannelCredentials.Insecure);
-            var client = MagicOnionClient.Create<IDebugUIHardwareBoxService>(channel);
-            var add = await client.Sell(Id, Product);
+            var client = MagicOnionClient.Create<IServerDB>(channel);
+            client.Add(newItem);
    
 
             // This will pop the current page off the navigation stack

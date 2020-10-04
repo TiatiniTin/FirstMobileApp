@@ -3,3 +3,7 @@ C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\bin\Debug\netstandard2.0\Box
 C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.csprojAssemblyReference.cache
 C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.AssemblyInfoInputs.cache
 C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.AssemblyInfo.cs
+C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\bin\Debug\netstandard2.0\BoxProtocol.pdb
+C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.csproj.CoreCompileInputs.cache
+C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.dll
+C:\Users\Vitya\Desktop\Place_Rating 2.0\BoxProtocol\obj\Debug\netstandard2.0\BoxProtocol.pdb

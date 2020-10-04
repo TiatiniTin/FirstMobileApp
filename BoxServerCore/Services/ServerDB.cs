@@ -6,13 +6,14 @@ using BoxProtocol.Models;
 using BoxProtocol.Interfaces;
 using Xamarin.Essentials;
 using Nest;
+using MagicOnion.Server;
 
 
-namespace BoxServerCore.Services
+namespace BoxServerCore
 {
-    public class ServerDB : IDataStore
+    public class ServerDB : ServiceBase<IServerDB>, IServerDB
     {
-        readonly List<Item> items;
+        //readonly List<Item> items;
 
         private static bool Initialized;
         private static ElasticClient _client;
@@ -23,6 +24,7 @@ namespace BoxServerCore.Services
                 var node = new Uri("http://127.0.0.1:9200");
                 var settings = new ConnectionSettings(node);
                 _client = new ElasticClient(settings);
+                Initialized = true;
             }
             return _client;
         }
@@ -33,7 +35,7 @@ namespace BoxServerCore.Services
             //Location location = Geolocation.GetLocationAsync(request).Result;
             var location = Geolocation.GetLastKnownLocationAsync().Result;
 
-            items = new List<Item>()
+            /*items = new List<Item>()
             {
                 new Item { Id = Guid.NewGuid().ToString(),
                     Name = "First person",
@@ -55,7 +57,32 @@ namespace BoxServerCore.Services
                     Place_description="This is an item description.",
                     Time_created = DateTime.Now
                 }
+            };*/
+            Item item_1 = new Item
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = "First person",
+                Place_image_path = "isaak.jpg",
+                Place_name = "Исаакиевский собор",
+                Place_rating = "10/10",
+                Place_location = location,
+                Place_description = "This is an item description.",
+                Time_created = DateTime.Now
             };
+            Item item_2 = new Item
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = "Second person",
+                Place_image_path = "Hermitage.jpg",
+                Place_name = "Эрмитаж",
+                Place_rating = "10/10",
+                Place_location = location,
+                Place_description = "This is an item description.",
+                Time_created = DateTime.Now
+            };
+
+            Add(item_1);
+            Add(item_2);
         }
 
         public void Add<Item>(Item item) where Item : class, IHaveID
@@ -68,37 +95,16 @@ namespace BoxServerCore.Services
                 return idx;
             });
         }
-        /*public async Task<bool> AddItemAsync(Item item)
-        {
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }*/
 
         public void Update<Item>(Item updated) where Item : class, IHaveID
         {
             Client().Update<Item>(updated.Id, descriptor => descriptor.Doc(updated).Index(typeof(Item).Name));
         }
-        /*public async Task<bool> UpdateItemAsync(Item item)
-        {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(oldItem);
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }*/
 
         public void Delete<Item>(string id) where Item : class, IHaveID
         {
             Client().Delete<Item>(id, descriptor => descriptor.Index(typeof(Item).Name));
         }
-        /*public async Task<bool> DeleteItemAsync(string id)
-        {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(oldItem);
-
-            return await Task.FromResult(true);
-        }*/
 
         public Item Get<Item>(string id) where Item : class, IHaveID
         {
@@ -110,23 +116,6 @@ namespace BoxServerCore.Services
             var docs = Client().Search<Item>();
             return docs.Documents.ToList();
         }      
-        
-        /*public async Task<Item> GetAll<Item>() where Item : class, IHaveID
-        {
-            var docs = await Client().Search<Item>();
-            return docs.Documents.ToList();
-        }*/
-
-        /*public async Task<Item> GetItemAsync(string id)
-        {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
-        }
-
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
-        {
-            return await Task.FromResult(items);
-        }*/
-
 
         public List<Item> GetOnLocation<Item>(GeoLocation point) where Item : class, IHaveCoordinates
         {

@@ -5,14 +5,12 @@ using System.Runtime.CompilerServices;
 using BoxProtocol.Interfaces;
 using Xamarin.Forms;
 
-//using BoxServerCore;
-//using Place_Rating.Services;
 
 namespace Place_Rating.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore DataStore => DependencyService.Get<IDataStore>();
+        public IServerDB DataStore => DependencyService.Get<IServerDB>();
 
         bool isBusy = false;
         public bool IsBusy

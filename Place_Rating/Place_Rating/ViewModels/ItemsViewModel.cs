@@ -22,7 +22,7 @@ namespace Place_Rating.ViewModels
         {
             Title = "Places";
             Items = new ObservableCollection<Item>();
-            LoadItemsCommand = new Command(ExecuteLoadItemsCommand());
+            LoadItemsCommand = new Command(ExecuteLoadItemsCommand);
             ItemTapped = new Command<Item>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
         }

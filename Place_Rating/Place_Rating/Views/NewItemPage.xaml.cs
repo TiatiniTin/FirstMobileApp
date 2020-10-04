@@ -4,7 +4,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using Place_Rating.Models;
+using BoxProtocol.Models;
 using Place_Rating.ViewModels;
 
 namespace Place_Rating.Views

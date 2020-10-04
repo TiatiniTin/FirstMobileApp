@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using Place_Rating.Models;
+using BoxProtocol.Models;
 using Place_Rating.Views;
 using Place_Rating.ViewModels;
 
